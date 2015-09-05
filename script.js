@@ -68,8 +68,8 @@ function down(e) {
     //e.preventDefault();
     draw = true;
     ctx.fillStyle = color;
-    lastX = e.targetTouches[0].pageX;
-    lastY = e.targetTouches[0].pageY;
+    lastX = e.targetTouches[0].pageX - this.offsetLeft;
+    lastY = e.targetTouches[0].pageY - this.offsetTop;
 }
 
 function up(e) {
@@ -81,8 +81,8 @@ function move(e) {
     "use strict";
     e.preventDefault();//prevent scroll on mobile 
     if (draw) {
-        var nowX = e.targetTouches[0].pageX,
-            nowY = e.targetTouches[0].pageY;
+        var nowX = e.targetTouches[0].pageX - this.offsetLeft,
+            nowY = e.targetTouches[0].pageY - this.offsetTop;
 
         // find all points between        
         var x1 = nowX,
