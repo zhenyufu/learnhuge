@@ -1,2 +1,7 @@
 # learnhuge
-Online Whiteboard App
+Online Whiteboard 
+http://learnhuge.com/
+
+# Open source
+in the gh-pages branch
+
