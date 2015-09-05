@@ -68,8 +68,15 @@ function down(e) {
     //e.preventDefault();
     draw = true;
     ctx.fillStyle = color;
-    lastX = e.targetTouches[0].pageX - this.offsetLeft;
-    lastY = e.targetTouches[0].pageY - this.offsetTop;
+    if(isAndroid){
+        lastX = e.targetTouches[0].pageX - this.offsetLeft;
+        lastY = e.targetTouches[0].pageY - this.offsetTop;
+    }
+    else{
+        lastX = e.pageX - this.offsetLeft;
+        lastY = e.pageY - this.offsetTop;
+    }
+    
 }
 
 function up(e) {
@@ -81,8 +88,16 @@ function move(e) {
     "use strict";
     e.preventDefault();//prevent scroll on mobile 
     if (draw) {
-        var nowX = e.targetTouches[0].pageX - this.offsetLeft,
+        var nowX = 0,
+            nowY = 0;
+        if(isAndroid){
+            nowX = e.targetTouches[0].pageX - this.offsetLeft;
             nowY = e.targetTouches[0].pageY - this.offsetTop;
+        }
+        else{
+            nowX = e.pageX - this.offsetLeft;
+            nowY = e.pageY - this.offsetTop;
+        }    
 
         // find all points between        
         var x1 = nowX,
