@@ -64,7 +64,6 @@ function down(e) {
 }
 
 function up(e) {
-    e.preventDefault();
     "use strict";
     draw = false;
 }
