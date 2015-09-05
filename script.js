@@ -44,20 +44,30 @@ ctx.fillRect(0, 0, canvas.width, canvas.height);
 
 
 // mouse movenment
-canvas.onmousedown = function (e) {
+
+canvas.addEventListener( 'mousedown', down);
+canvas.addEventListener( 'mouseup', up);
+canvas.addEventListener( 'mousemove', move);
+
+canvas.addEventListener( 'touchstart', down);
+canvas.addEventListener( 'touchend', up);
+canvas.addEventListener( 'touchmove', move);
+    
+
+function down(e) {
     "use strict";
     draw = true;
     ctx.fillStyle = color;
     lastX = e.pageX - this.offsetLeft;
     lastY = e.pageY - this.offsetTop;
-};
+}
 
-canvas.onmouseup = function (e) {
+function up(e) {
     "use strict";
     draw = false;
-};
+}
 
-canvas.onmousemove = function (e) {
+function move(e) {
     "use strict";
     if (draw) {
         var nowX = e.pageX - this.offsetLeft,
