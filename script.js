@@ -22,7 +22,13 @@ var canvas = document.getElementById("myCanvas"),
     lastX = 0,
     lastY = 0,
     color = "#000",
-    lineThickness = 5;
+    lineThickness = 5,
+    isAndroid = false;
+
+if( (navigator.userAgent || navigator.vendor || window.opera).match( /Android/i ) ){
+    isAndroid = true;
+}
+
 
 function change_color(c){
     color = c;
@@ -62,8 +68,8 @@ function down(e) {
     //e.preventDefault();
     draw = true;
     ctx.fillStyle = color;
-    lastX = (e.pageX || e.targetTouches[0].pageX) - this.offsetLeft ;
-    lastY = (e.pageY || e.targetTouches[0].pageY) - this.offsetTop ;
+    lastX = e.targetTouches[0].pageX;
+    lastY = e.targetTouches[0].pageY;
 }
 
 function up(e) {
@@ -75,8 +81,8 @@ function move(e) {
     "use strict";
     e.preventDefault();//prevent scroll on mobile 
     if (draw) {
-        var nowX = (e.pageX || e.targetTouches[0].pageX) - this.offsetLeft,
-            nowY = (e.pageY || e.targetTouches[0].pageY) - this.offsetTop;
+        var nowX = e.targetTouches[0].pageX,
+            nowY = e.targetTouches[0].pageY;
 
         // find all points between        
         var x1 = nowX,
