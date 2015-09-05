@@ -69,6 +69,7 @@ function up(e) {
 
 function move(e) {
     "use strict";
+    e.preventDefault();//prevent scroll?
     if (draw) {
         var nowX = e.pageX - this.offsetLeft,
             nowY = e.pageY - this.offsetTop;
