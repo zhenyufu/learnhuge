@@ -56,7 +56,7 @@ canvas.addEventListener( 'touchmove', move);
 
 function down(e) {
     "use strict";
-    e.preventDefault();
+    //e.preventDefault();
     draw = true;
     ctx.fillStyle = color;
     lastX = e.pageX - this.offsetLeft;
@@ -70,7 +70,7 @@ function up(e) {
 
 function move(e) {
     "use strict";
-    //e.preventDefault();//prevent scroll on mobile 
+    e.preventDefault();//prevent scroll on mobile 
     if (draw) {
         var nowX = e.pageX - this.offsetLeft,
             nowY = e.pageY - this.offsetTop;
