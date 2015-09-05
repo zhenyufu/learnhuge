@@ -4,12 +4,13 @@ Open source Online Whiteboard
 
 ## Basics
 * Uses html5 canvas 
-* Works on desktop broswers and ios Safari, unpredictable on android
+* Works on Desktop broswers, ios Safari and Android Chrome
+* Unpredictable on other android browsers
 
 
-## Details at my blog
+## Details 
 http://www.csmojo.com/2015/09/learn-huge-whiteboard.html
 
 
 ## To Do
-* make it work on android 
+* 
