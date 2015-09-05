@@ -1,5 +1,5 @@
 # learnhuge
-Open source Online Whiteboard
+Open source Online Whiteboard http://learnhuge.com/
 
 
 ## Basics
