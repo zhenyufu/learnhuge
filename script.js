@@ -1,9 +1,9 @@
 function w3_open() { 
-    if (document.body.clientWidth > 800){
+    if (document.body.clientWidth < 800){
         document.getElementsByClassName("w3-sidenav")[0].style.display = "block";
+        document.getElementsByClassName("w3-sidenav")[0].style.width = "100%";
     }
     else{
-        document.getElementsByClassName("w3-sidenav")[0].style.width = "100%";
         document.getElementsByClassName("w3-sidenav")[0].style.display = "block";     
     } 
 }
@@ -26,6 +26,9 @@ var canvas = document.getElementById("myCanvas"),
 
 function change_color(c){
     color = c;
+    if (document.body.clientWidth < 800){
+        w3_close();
+    }
 }
 
 
