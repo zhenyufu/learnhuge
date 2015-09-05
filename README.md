@@ -13,4 +13,4 @@ http://www.csmojo.com/2015/09/learn-huge-whiteboard.html
 
 
 ## To Do
-* Write a To Do list
+* make a To Do list
