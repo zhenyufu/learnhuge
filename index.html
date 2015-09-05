@@ -1,0 +1,69 @@
+<html>
+<!-- made by csmojo.com -->
+    <head>
+        <title>Learn Huge Whiteboard</title>
+        <meta name="description" content="Learn Huge is a simple, clean and effective online whiteboard to use with teaching and learning. It is so clean that for more info on this project, go to: csmojo.com">
+
+        <link rel="stylesheet" href="w3.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    </head>
+
+    <body>
+    
+        <nav class="w3-sidenav w3-light-grey w3-card-2 w3-animate-left w3-text-theme" id="my-side-text" >
+            <h2 class="w3-text-blue w3-center">Learn Huge</h2>
+            <h6 class="w3-text-grey w3-center">Your Online Whiteboard</h6>
+            <br/>
+            
+            <i class="fa fa-paint-brush my-side-pad"></i> : 
+            <div class="w3-center">
+                <a href="javascript:void(0)" onclick="change_color('#000')" class="w3-text-black w3-xxxlarge"><i class="fa fa-square"></i></a>
+                <a href="javascript:void(0)" onclick="change_color('#F44336')" class="w3-text-red w3-xxxlarge"><i class="fa fa-square"></i></a>
+                <a href="javascript:void(0)" onclick="change_color('#4CAF50')" class="w3-text-green w3-xxxlarge"><i class="fa fa-square"></i></a>
+                <a href="javascript:void(0)" onclick="change_color('#2196F3')" class="w3-text-blue w3-xxxlarge"><i class="fa fa-square"></i></a>
+            </div>
+            <br/>
+            
+            <i class="fa fa-keyboard-o my-side-pad"></i> :
+            <div class="w3-center">
+                Clear: F5<br/>
+                Full Screen: F11<br/>
+                Save: Ctrl+p<br/>
+                Download: Ctrl+s
+            </div>
+            <br/>
+            
+            <i class="fa fa-link my-side-pad"></i> :
+            <a href="http://www.csmojo.com" title="More Awesomeness" class="w3-center"><i class="fa fa-book "></i> My Blog</a>
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/sharer/sharer.php?u=http://learnhuge.com" title="Share on Facebook" target="_blank" class="btn btn-facebook w3-center"><i class="fa fa-facebook"></i> Facebook</a>
+            <!-- Twitter -->
+            <a href="http://twitter.com/home?status=http://learnhuge.com" title="Share on Twitter" target="_blank" class="btn btn-twitter w3-center"><i class="fa fa-twitter"></i> Twitter</a>
+             <!-- Google+ -->
+            <a href="https://plus.google.com/share?url=http://learnhuge.com" title="Share on Google+" target="_blank" class="btn btn-googleplus w3-center"><i class="fa fa-google-plus"></i> Google+</a>
+            <br/>
+            
+            <a href="javascript:void(0)" onclick="w3_close()" class="w3-closenav w3-center w3-light-blue"><i class="fa fa-times"></i> Close</a>
+        </nav>
+        <i onclick="w3_open()" class="fa fa-bars w3-xxlarge w3-opennav w3-container w3-card-4 w3-left w3-light-blue"  id="my-side-button"></i> 
+
+        <canvas id="myCanvas">
+            Sorry bro, your broswer does not support html canvas.<br/>
+            Try changing a broswer.
+        </canvas>
+          
+        <script src="script.js"></script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-67227836-1', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+    </body>
+    
+</html>
