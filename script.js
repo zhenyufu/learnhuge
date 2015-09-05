@@ -59,8 +59,8 @@ function down(e) {
     //e.preventDefault();
     draw = true;
     ctx.fillStyle = color;
-    lastX = e.pageX - this.offsetLeft;
-    lastY = e.pageY - this.offsetTop;
+    lastX = e.clientX;
+    lastY = e.clientY;
 }
 
 function up(e) {
@@ -72,8 +72,8 @@ function move(e) {
     "use strict";
     e.preventDefault();//prevent scroll on mobile 
     if (draw) {
-        var nowX = e.pageX - this.offsetLeft,
-            nowY = e.pageY - this.offsetTop;
+        var nowX = e.clientX,
+            nowY = e.clientY;
 
         // find all points between        
         var x1 = nowX,
