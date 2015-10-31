@@ -12,5 +12,9 @@ Open source Online Whiteboard http://learnhuge.com/
 http://www.csmojo.com/2015/09/learn-huge-whiteboard.html
 
 
+## License
+MIT License
+
+
 ## To Do
 * make a To Do list
