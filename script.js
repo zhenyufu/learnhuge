@@ -47,6 +47,7 @@ function my_dimension() {
 window.onload = my_dimension();
 //window.addEventListener('resize', function(event){ myDimension();});
 
+
 function my_clear(){
     //whole background
     //ctx.fillStyle = "#fff";
@@ -54,8 +55,9 @@ function my_clear(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 my_clear();
-// mouse movenment
 
+
+// mouse movenment
 canvas.addEventListener( 'mousedown', down);
 canvas.addEventListener( 'mouseup', up);
 canvas.addEventListener( 'mousemove', move);
@@ -85,6 +87,7 @@ function up(e) {
     "use strict";
     draw = false;
 }
+
 
 function move(e) {
     "use strict";
@@ -152,8 +155,6 @@ function move(e) {
                 error -= 1.0;
             }
         }
-
-
 
         lastX = nowX;
         lastY = nowY;
